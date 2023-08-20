@@ -1,15 +1,15 @@
 import React from "react";
 import {
-  MobileNav,
+  Collapse,
   Typography,
-  Button,
   IconButton,
 } from "@material-tailwind/react";
-import {Link, Routes, Route} from 'react-router-dom'
-import { HomePage, AboutUs, ContactUs, Donate, Team, CustomButton} from "../components"
+import {Link, Routes, Route, useNavigate} from 'react-router-dom'
+import { HomePage, AboutUs, ContactUs, Donate, Team, CustomButton, Adopt, DogModal} from "../components"
 import LogoImage from "../public/ADOPT.png"
  
 export function Navigation() {
+  const navigate = useNavigate(); 
   const [openNav, setOpenNav] = React.useState(false);
  
   React.useEffect(() => {
@@ -18,17 +18,13 @@ export function Navigation() {
       () => window.innerWidth >= 960 && setOpenNav(false),
     );
   }, []);
-  const handleButtonClick = () => {
-    console.log('Button Clicked')
-  }
-
 
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 ">
       <Typography
         as="li"
-        variant="md"
-        color="gray"
+        variant="paragraph"
+        color="black"
         className="px-5 py-2 drop-shadow-10 rounded-md font-bold hover:bg-amber-400 hover:text-white duration-300 hover:scale-110"
 
       >
@@ -38,8 +34,8 @@ export function Navigation() {
       </Typography>
       <Typography
         as="li"
-        variant="md"
-        color="gray"
+        variant="paragraph"
+        color="black"
         className="px-5 py-2 drop-shadow-10 rounded-md font-bold hover:bg-amber-400 hover:text-white duration-300 hover:scale-110"
 
       >
@@ -49,8 +45,8 @@ export function Navigation() {
       </Typography>
       <Typography
         as="li"
-        variant="md"
-        color="gray"
+        variant="paragraph"
+        color="black"
         className="px-5 py-2 drop-shadow-10 rounded-md font-bold hover:bg-amber-400 hover:text-white duration-300 hover:scale-110"
 
       >
@@ -60,8 +56,8 @@ export function Navigation() {
       </Typography>
       <Typography
         as="li"
-        variant="md"
-        color="gray"
+        variant="paragraph"
+        color="black"
         className="px-5 py-2 drop-shadow-10 rounded-md font-bold hover:bg-amber-400 hover:text-white duration-300 hover:scale-110"
 
       >
@@ -71,13 +67,13 @@ export function Navigation() {
       </Typography>
       <Typography
         as="li"
-        variant="md"
-        color="gray"
+        variant="paragraph"
+        color="black"
         className="px-5 py-2 drop-shadow-10 rounded-md font-bold hover:bg-amber-400 hover:text-white duration-300 hover:scale-110"
 
       >
-        <Link to="/Donate" className="flex items-center">
-          Donate Now
+        <Link to="/Adopt" className="flex items-center">
+          Adopt a Dog
         </Link>
       </Typography>
     </ul>
@@ -86,7 +82,7 @@ export function Navigation() {
   return (
     <>
     <div className="max-w-screen shadow-lg py-2 px-4 lg:px-8 lg:py-4 bg-amber-200">
-      <div className="mx-auto flex items-center justify-between text-blue-gray-900">
+      <div className="mx-auto flex items-center justify-between text-blue-black-900">
        <img 
        src={LogoImage}
        height={100} 
@@ -102,6 +98,7 @@ export function Navigation() {
           btnType="button"
           btnVariant="gradient"
           btnSize="lg"
+          handleClick={()=>navigate("/Donate")}
         />
   
         <IconButton
@@ -142,21 +139,22 @@ export function Navigation() {
           )}
         </IconButton>
       </div>
-      <MobileNav open={openNav}>
+      <Collapse open={openNav}>
         <div className="container mx-auto">
           {navList}
           <CustomButton
             title="Donate Now!"
             containerStyles="my-2 inline-flex flex-1"
-            handleClick={handleButtonClick}
             btnType="button"
             textStyles="text-white"
             isDisabled={false}
             btnColor="amber"
+            btnSize="lg"
+            handleClick={()=>navigate("/Donate")}
             btnVariant="gradient"
           />
         </div>
-      </MobileNav>
+      </Collapse>
     </div>
     <Routes>
       <Route path="/" element={<HomePage/>}/>
@@ -164,6 +162,8 @@ export function Navigation() {
       <Route path="/ContactUs" element={<ContactUs/>}/>
       <Route path="/Team" element={<Team/>}/>
       <Route path="/Donate" element={<Donate/>}/>
+      <Route path="/Adopt" element={<Adopt/>}/>
+      <Route path="/DogModal" element={<DogModal/>}/>
     </Routes>
     </>
   );

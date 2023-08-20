@@ -1,11 +1,13 @@
 import React from 'react'
 import landingImage from '../public/Landing__page.jpg'
-import { Typography, Button} from '@material-tailwind/react'
+import { Typography} from '@material-tailwind/react'
 import CustomButton from './CustomButton'
+import { useNavigate } from 'react-router-dom'
 
 const HomePage = () => {
+  const navigate = useNavigate(); 
   return (
-
+<>
     <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-0 my-20 ml-10 mr-20">
       <img
         src={landingImage}
@@ -32,13 +34,12 @@ const HomePage = () => {
           btnColor="amber"
           btnVariant="gradient"
           btnSize="lg"
+          handleClick={()=>navigate("/Adopt")}
           containerStyles="inline-block mt-10 text-white transform -translate-x-full animate-slide-from-bottom delay-500"
         />
       </div>
-
-
-
 </div>
+</>
   )
 }
 

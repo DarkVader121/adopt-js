@@ -8,6 +8,10 @@ import CustomButton from "./CustomButton";
 import MissionComp from "./MissionComp";
 import VisionComp from "./VisionComp";
 import Goals from "./Goals";
+import DogCard from "./DogCard";
+import SelectDogs from "./SelectDogs";
+import DogModal from "./DogModal";
+import DogData from "./DogData";
 
 export {
     HomePage,
@@ -20,4 +24,8 @@ export {
     MissionComp,
     VisionComp,
     Goals, 
+    DogCard, 
+    SelectDogs, 
+    DogModal, 
+    DogData, 
 }
