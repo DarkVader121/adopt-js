@@ -4,10 +4,10 @@ import { Typography } from '@material-tailwind/react'
 const DogData = ({dog}) => {
   return (
     <Typography
-    variant="paragraph"
+    variant="lead"
     className="text-black text-left"
         >
-        Hi, I'm <span className='text-amber-600'>{dog.name}</span> Let me tell you about myself. I'm good with children,
+        Hi! I'm <span className='text-amber-600'>{dog.name}</span> Let me tell you about myself. I'm good with children,
         rating myself at <span className='text-amber-600'>{dog.good_with_children}</span>  out of 10. When it comes to 
         other dogs, I'd say I'm about a <span className='text-amber-600'>{dog.good_with_other_dogs}</span>. As for 
         shedding, I'd give myself a <span className='text-amber-600'> {dog.shedding}</span>. Grooming? Well, let's say

@@ -6,7 +6,7 @@ import {
 } from "@material-tailwind/react";
 import {Link, Routes, Route, useNavigate} from 'react-router-dom'
 import { HomePage, AboutUs, ContactUs, Donate, Team, CustomButton, Adopt, DogModal} from "../components"
-import LogoImage from "../public/ADOPT.png"
+import LogoImage from "../public/favicon.png"
  
 export function Navigation() {
   const navigate = useNavigate(); 
@@ -81,15 +81,26 @@ export function Navigation() {
  
   return (
     <>
-    <div className="max-w-screen shadow-lg py-2 px-4 lg:px-8 lg:py-4 bg-amber-200">
+    <div className="max-w-screen shadow-lg  px-4 lg:px-8  bg-amber-200">
       <div className="mx-auto flex items-center justify-between text-blue-black-900">
+        <button className="flex justify-center items-center" onClick={()=>navigate("/")}>
        <img 
        src={LogoImage}
-       height={100} 
-       width={150} 
+       height={50} 
+       width={70} 
        alt="Logo Adopt" 
        priority="true"
        />
+       <Typography
+        variant="h2"
+        className="text-white drop-shadow-lg"
+       >
+        <h1 className="ml-2">
+          ADOPT
+        </h1>
+       </Typography>
+
+      </button>
         <div className="hidden lg:block">{navList}</div>
         <CustomButton
           title="Donate"
