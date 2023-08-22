@@ -8,14 +8,14 @@ const HomePage = () => {
   const navigate = useNavigate(); 
   return (
 <>
-    <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-0 my-20 ml-10 mr-20">
+    <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-0 lg:my-20 lg:ml-20 lg:mr-20 md:my-0 md:mx-0 animate-slide-from-left delay-500">
       <img
         src={landingImage}
         width={1000}
-        className='object-center transform -translate-x-full animate-slide-from-left delay-500 rounded-md'
+        priority 
+        className='object-center  rounded-md'
       />
-      <div className='inline-block ml-10 mt-12 '>
-       <div className='transform -translate-x-full delay-500 animate-slide-from-right'>
+      <div className='lg:ml-10 lg:mt-12 md:mx-5 md:my-5  '>
         <Typography
           variant="h1"
         >
@@ -28,14 +28,13 @@ const HomePage = () => {
         >
           I'm your German Shepherd pal, thrilled to guide you in finding your perfect dog companion. Our adoption hub is where tails wag and hearts connect. Let's join paws and bring joy to a deserving dog. Start your journey today!
         </Typography>
-        </div>
-        <CustomButton
+                <CustomButton
           title="&nbsp; Adopt Now!"
           btnColor="amber"
           btnVariant="gradient"
           btnSize="lg"
           handleClick={()=>navigate("/Adopt")}
-          containerStyles="inline-block mt-10 text-white transform -translate-x-full animate-slide-from-bottom delay-500"
+          containerStyles="inline-block mt-10 text-white "
         />
       </div>
 </div>

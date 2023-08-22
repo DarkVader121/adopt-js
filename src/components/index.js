@@ -12,6 +12,8 @@ import DogCard from "./DogCard";
 import SelectDogs from "./SelectDogs";
 import DogModal from "./DogModal";
 import DogData from "./DogData";
+import WebNav from "./WebNav";
+import MdComp from "./MdComp";
 
 export {
     HomePage,
@@ -28,4 +30,6 @@ export {
     SelectDogs, 
     DogModal, 
     DogData, 
+    WebNav, 
+    MdComp, 
 }

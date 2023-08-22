@@ -27,7 +27,7 @@ const DogModal = ({dog}) => {
         />
         <Dialog open={open} handler={handleOpen}>
             <DialogHeader>{dog.name}</DialogHeader>
-            <DialogBody style={{ maxHeight: '600px', overflow:'auto'}}>
+            <DialogBody style={{ maxHeight: '500px', overflow:'auto'}}>
                 <div className='flex justify-center'>
                     <img
                             src={dog.image_link}

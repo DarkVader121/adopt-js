@@ -10,6 +10,9 @@ const tailwindConfig = {
       colors: {
         PrimaryColor: "#FFD28A", // Define the custom color here
       },
+      fontFamily: {
+        mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
+      },
     },
   },
   plugins: [],

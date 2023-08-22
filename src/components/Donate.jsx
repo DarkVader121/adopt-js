@@ -7,8 +7,8 @@ import donate__dog from '../public/dog__donatee.png'
 
 const Donate = () => {
   return (
-    <div className='p-20 grid lg:grid-cols-2 md:grid-cols-1'>
-      <div className='animate-slide-from-left'>
+    <div className='lg:p-20 grid lg:grid-cols-2 md:grid-cols-1'>
+      <div className='animate-slide-from-left delay-500'>
         <Typography
           variant='h1'
         >
@@ -91,7 +91,7 @@ const Donate = () => {
         </div>
       </div>
     </div>
-    <div className='animate-slide-from-right mt-5'>
+    <div className='hidden lg:block animate-slide-from-right delay-500 mt-5'>
       <img
         src={donate__dog}
         height={1500}

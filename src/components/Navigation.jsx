@@ -5,7 +5,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import {Link, Routes, Route, useNavigate} from 'react-router-dom'
-import { HomePage, AboutUs, ContactUs, Donate, Team, CustomButton, Adopt, DogModal} from "../components"
+import { HomePage, AboutUs, ContactUs, Donate, Team, CustomButton, Adopt, DogModal, WebNav } from "../components"
 import LogoImage from "../public/favicon.png"
  
 export function Navigation() {
@@ -28,7 +28,7 @@ export function Navigation() {
         className="px-5 py-2 drop-shadow-10 rounded-md font-bold hover:bg-amber-400 hover:text-white duration-300 hover:scale-110"
 
       >
-        <Link to="/" className="flex items-center">
+        <Link onClick={()=>{setOpenNav(!openNav)}} to="/" className="flex items-center">
           Home
         </Link>
       </Typography>
@@ -39,7 +39,7 @@ export function Navigation() {
         className="px-5 py-2 drop-shadow-10 rounded-md font-bold hover:bg-amber-400 hover:text-white duration-300 hover:scale-110"
 
       >
-        <Link to="/AboutUs" className="flex items-center">
+        <Link onClick={()=>{setOpenNav(!openNav)}} to="/AboutUs" className="flex items-center">
           About Us
         </Link>
       </Typography>
@@ -50,7 +50,7 @@ export function Navigation() {
         className="px-5 py-2 drop-shadow-10 rounded-md font-bold hover:bg-amber-400 hover:text-white duration-300 hover:scale-110"
 
       >
-        <Link to="/ContactUs" className="flex items-center">
+        <Link onClick={()=>{setOpenNav(!openNav)}} to="/ContactUs" className="flex items-center">
           Contact Us
         </Link>
       </Typography>
@@ -61,7 +61,7 @@ export function Navigation() {
         className="px-5 py-2 drop-shadow-10 rounded-md font-bold hover:bg-amber-400 hover:text-white duration-300 hover:scale-110"
 
       >
-        <Link to="/Team" className="flex items-center">
+        <Link onClick={()=>{setOpenNav(!openNav)}} to="/Team" className="flex items-center">
           Meet the team
         </Link>
       </Typography>
@@ -72,7 +72,7 @@ export function Navigation() {
         className="px-5 py-2 drop-shadow-10 rounded-md font-bold hover:bg-amber-400 hover:text-white duration-300 hover:scale-110"
 
       >
-        <Link to="/Adopt" className="flex items-center">
+        <Link onClick={()=>{setOpenNav(!openNav)}} to="/Adopt" className="flex items-center">
           Adopt a Dog
         </Link>
       </Typography>
@@ -101,7 +101,7 @@ export function Navigation() {
        </Typography>
 
       </button>
-        <div className="hidden lg:block">{navList}</div>
+        <div className="hidden lg:block">{<WebNav/>}</div>
         <CustomButton
           title="Donate"
           btnColor="amber"
@@ -109,7 +109,9 @@ export function Navigation() {
           btnType="button"
           btnVariant="gradient"
           btnSize="lg"
-          handleClick={()=>navigate("/Donate")}
+          handleClick={()=> {
+            navigate("/Donate");
+          }}
         />
   
         <IconButton
@@ -161,7 +163,10 @@ export function Navigation() {
             isDisabled={false}
             btnColor="amber"
             btnSize="lg"
-            handleClick={()=>navigate("/Donate")}
+            handleClick={()=>{
+              navigate("/Donate")
+              setOpenNav(!openNav);
+            }}
             btnVariant="gradient"
           />
         </div>

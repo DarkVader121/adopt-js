@@ -38,7 +38,7 @@ const Adopt = () => {
 
   return (
     <>
-    <div className='pt-10 px-20 pb-20 animate-slide-from-left'>
+    <div className='lg:pt-10 lg:px-20 lg:pb-20 md:p-5 animate-slide-from-left delay-500'>
       <Typography
         variant='h1'
         className='text-center'

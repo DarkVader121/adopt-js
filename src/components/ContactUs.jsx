@@ -8,11 +8,11 @@ const ContactUs = () => {
   return (
     <>
     <div className='bg-orange-600'>
-      <div className='px-20 pt-20 pb-10'>
+      <div className='lg:px-20 lg:pt-20 pb-10'>
       <Typography
         variant='h1'
         color='white'
-        className='text-center animate-slide-from-left'
+        className='text-center animate-slide-from-left delay-500'
       >
         We Would Love to Hear From You
       </Typography>
@@ -24,7 +24,7 @@ const ContactUs = () => {
       You can reach us on Facebook for updates and stories, or contact us directly via email or by phone.
       </Typography>
       <div className='mt-10 grid lg:justify-items-center lg:grid-cols-3 md:grid-cols-1'>
-        <div className='flex animate-slide-from-left mt-5'>
+        <div className='flex animate-slide-from-left delay-500 mt-5'>
           <div className='rounded-full p-2 bg-orange-300'>
             <img
               src={facebook}
@@ -48,7 +48,7 @@ const ContactUs = () => {
             </Typography>
             </Typography>
         </div>
-        <div className='flex animate-slide-from-left mt-5'>
+        <div className='flex animate-slide-from-left delay-500 mt-5'>
           <div className='rounded-full p-2 bg-orange-300'>
             <img
               src={gmail}
@@ -72,7 +72,7 @@ const ContactUs = () => {
             </Typography>
           </Typography>
         </div>
-        <div className='flex animate-slide-from-left mt-5'>
+        <div className='flex animate-slide-from-left delay-500 mt-5'>
           <div className='rounded-full p-2 bg-orange-300'>
             <img
               src={phone}
@@ -102,7 +102,7 @@ const ContactUs = () => {
 
     <Typography
       variant='h1'
-      className='mt-20 text-center animate-slide-from-left'
+      className='lg:mt-20  text-center animate-slide-from-left delay-500'
     >
       Home Address
     </Typography>
@@ -121,7 +121,7 @@ const ContactUs = () => {
             San Antonio Village, <br/> Poblacion, Lila, Bohol, <br/> Philippines
         </Typography>
       </div>
-      <div className='animate-slide-from-left'>
+      <div className='animate-slide-from-left delay-500 '>
         <Typography
           variant='h3'
           className='text-center mt-10'

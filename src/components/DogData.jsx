@@ -5,7 +5,7 @@ const DogData = ({dog}) => {
   return (
     <Typography
     variant="lead"
-    className="text-black text-left"
+    className="text-black text-left md:text-base"
         >
         Hi! I'm <span className='text-amber-600'>{dog.name}</span> Let me tell you about myself. I'm good with children,
         rating myself at <span className='text-amber-600'>{dog.good_with_children}</span>  out of 10. When it comes to 
@@ -18,16 +18,6 @@ const DogData = ({dog}) => {
             <span className='text-amber-600'>{dog.protectiveness}</span>  . Trainability? I'd say I'm a <span className='text-amber-600'>{dog.trainability}</span> . 
             My energy level is <span className='text-amber-600'>{dog.energy}</span> , and my barking, well, that's a <span className='text-amber-600'>{dog.barking}</span> .
 
-
-        {/* In terms of life expectancy, I can hang around for  <span className='text-amber-600'>{dog.min_life_expectancy}</span> 
-        &nbsp; to <span className='text-amber-600'>{dog.max_life_expectancy}</span>  years. For the taller folks, I can reach a 
-            max height of <span className='text-amber-600'>{dog.max_height_male} </span> (males) or <span className='text-amber-600'>{dog.max_height_female} </span> 
-            (females). When it comes to weight, males can get up to &nbsp; 
-            <span className='text-amber-600'>{dog.max_weight_male}</span> , and females to <span className='text-amber-600'>{dog.max_weight_female}</span>. 
-            On the shorter side, males stand at <span className='text-amber-600'>{dog.min_height_male}</span>, and females
-            at <span className='text-amber-600'>{dog.min_height_female}</span> . Weight-wise, males can be as light as &nbsp;
-            <span className='text-amber-600'>{dog.min_weight_male}</span> , and females as dainty as <span className='text-amber-600'>{dog.min_weight_female}</span>. */}
-            <br/>
             <br/>Here's a quick rundown of me:<br/>
                 Good with children: <span className='text-amber-600'>{dog.good_with_children} </span> <br/>
                 Good with other dogs: <span className='text-amber-600'>{dog.good_with_other_dogs}</span>  <br/>

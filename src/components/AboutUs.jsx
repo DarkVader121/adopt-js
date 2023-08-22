@@ -1,11 +1,11 @@
 import { Typography } from '@material-tailwind/react'
 import React from 'react'
 import aboutImage from '../public/Dog__shelter2.jpg'
-import {MissionComp, VisionComp, Goals} from '../components'
+import {MissionComp, VisionComp, Goals, MdComp} from '../components'
 
 const AboutUs = () => {
   return (
-    <div className='p-10 animate-slide-from-left delay-100'>
+    <div className='lg:p-10 animate-slide-from-left delay-500'>
       <div className='grid justify-items-center'>
         <div>
           <Typography
@@ -19,7 +19,7 @@ const AboutUs = () => {
           src={aboutImage}
           width={900}
           alt='adopt office'
-          className='object-center rounded-md mt-5 '
+          className='object-center rounded-md lg:mt-5 '
         />
 
         <Typography
@@ -30,9 +30,15 @@ const AboutUs = () => {
         </Typography>
         </div>
       </div>  
+      <div className='lg:hidden md:block'>
+         <MdComp/>
+      </div>
+      <div className='hidden lg:block'>
       <VisionComp/>
       <MissionComp/>
       <Goals/>
+      </div>
+      
     </div>
   )
 }

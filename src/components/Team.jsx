@@ -9,7 +9,7 @@ import staff__6 from '../public/staff__6.png'
 
 const Team = () => {
   return (
-    <div className='text-center p-20 animate-slide-from-left'>
+    <div className='text-center lg:p-20 animate-slide-from-left delay-500'>
       <Typography
         variant='h1'
         className=''
@@ -17,7 +17,7 @@ const Team = () => {
         Meet the Team
       </Typography>
       <div className=' grid lg:grid-cols-3 justify-items-center md:grid-cols-1'>
-        <div className='mt-10 hover:scale-150  '>
+        <div className='mt-20 hover:scale-150'>
           <img
             src={staff__1}
             height={200}
@@ -37,7 +37,7 @@ const Team = () => {
             Assistant Veterinarian  
           </Typography>
         </div>
-       <div className='mt-10 hover:scale-150 '>
+       <div className='mt-20 hover:scale-150 '>
           <img
             src={staff__2}
             height={200}
@@ -57,7 +57,7 @@ const Team = () => {
             Ceo / Founder
           </Typography>
         </div>
-       <div className='mt-10 hover:scale-150 '>
+       <div className='mt-20 hover:scale-150 '>
           <img
             src={staff__3}
             height={200}
